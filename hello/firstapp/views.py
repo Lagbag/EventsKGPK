@@ -50,6 +50,7 @@ def submit_form(request):
         if db == "Event": add_event(items)
         elif db == "Users": add_users(items)
         print(db, table)
+        return redirect('home')
     else:
         return render(request, '/')
 
